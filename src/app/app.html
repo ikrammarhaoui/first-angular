@@ -1,3 +1,12 @@
+<main>
+<h1>{{ titre }}</h1>
+<p>{{ description }}</p>
+<app-salutation></app-salutation> 
+<p>Version : {{ version }} — Année : {{ annee }}</p>
+<p>Prénom : {{ prenom }}</p> <p>Note max : {{ noteMax }} __ Moitié : {{noteMax/2}}</p>
+<app-profil></app-profil>
+</main>
+
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
@@ -6,7 +15,7 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<!--
 <style>
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
@@ -328,7 +337,9 @@
     </div>
   </div>
 </main>
+<router-outlet />
 
+-->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
@@ -336,6 +347,12 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-<router-outlet />
+<!--
+<main>
+ <h1>{{ titre }}</h1>
+ <p>{{ description }}</p>
+ <p>Version : <strong>{{ version }}</strong> — Année : {{ annee }}</p>
+ <p>5 × 3 = {{ 5 * 3 }}</p>
+ <p>{{ titre.toUpperCase() }}</p>
+</main>
+-->
