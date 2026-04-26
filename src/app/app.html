@@ -1,12 +1,60 @@
-<main>
+<!-- <h1>Gestionnaire de Contacts</h1>                           -->
+<!-- <app-formulaire-contact></app-formulaire-contact>           -->
+
+<header>
+  <h1>🔍 Gestionnaire de Contacts</h1>
+  <span>{{ messageStatut }}</span>
+</header>
+
+<!-- EXERCICE 3D — Écouter l'événement @Output de l'enfant formulaire -->
+<app-formulaire-contact
+  (contactSauvegarde)="ajouterContact($event)">
+</app-formulaire-contact>
+
+                             
+<!-- <app-liste-contacts [contacts]="mesContacts">              
+ </app-liste-contacts>    -->
+<app-liste-contacts
+  [contacts]="mesContacts"
+  (contactSupprime)="supprimerContact($event)">
+</app-liste-contacts>
+
+<!--<main>
 <h1>{{ titre }}</h1>
 <p>{{ description }}</p>
 <app-salutation></app-salutation> 
 <p>Version : {{ version }} — Année : {{ annee }}</p>
 <p>Prénom : {{ prenom }}</p> <p>Note max : {{ noteMax }} __ Moitié : {{noteMax/2}}</p>
 <app-profil></app-profil>
-</main>
 
+<button (click)="incrementer()">
+Clics : {{ compteur }}
+</button>
+<button (click)="changerCouleur('red')">Rouge</button>
+<button (click)="changerCouleur('blue')">Bleu</button>
+<input (keyup)="onFrappe($event)"  [style.background]="couleur">
+<p [style.color]="couleur" >Vous tapez : {{ texte }}</p>
+
+<h1>Méthode classique</h1>
+<app-signal 
+  [nom]="nom" 
+  [prix]="prix">
+</app-signal>
+
+<h1>Méthode signal</h1>
+<app-input-model 
+  [nom]="nom" 
+  [prix]="prix">
+</app-input-model>
+
+<app-formulaire-contact
+  (contactSauvegarde)="ajouter($event)">
+</app-formulaire-contact>
+
+<app-liste-contacts
+  [contacts]="contacts()">
+</app-liste-contacts>
+</main> -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
